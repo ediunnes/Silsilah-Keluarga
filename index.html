@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Silsilah Keluarga</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <h1>Selamat Datang di Website Silsilah Keluarga Besar Almarhum Bp. Moestandji</h1>
+        </marquee>
+        <img src="keluarga.png" alt="poto keluarga">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#Orang Tua">Orang Tua</a></li>
+            <li><a href="#Anak">Anak</a></li>
+            <li><a href="#Cucu">Cucu</a></li>
+            <li><a href="#Cicit">Cicit</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="Orang Tua">
+            <h2>Orang Tua</h2>
+            <p>Bapak : Almarhum Moestandji</p>
+            <p>Ibu : Almarhumah Muswanti</p>
+            <button id="tombolSapa">Klik tombol ini</button>
+        </section>
+
+        <section id="Anak" class="hidden">
+            <h2>Anak dan Pasangan</h2>
+            <p>1. Almarhumah Erni Herawati - Harry Sis Susilo</p>
+            <p>2. Puji Hastuti</p>
+            <p>3. Heri Pujiono - Siti Kholifah</p>
+            <p>4. Puji Santoso - Nur Sangadah</p>
+            <p>5. Edi Mulyono - Siti Zoelfiyah</p>
+            <p>6. Budi Prihatno - Imawati</p>
+        </section>
+
+        <section id="Cucu" class="hidden">
+            <h2>Cucu dan Pasangan</h2>
+            <p>1. Niken Saraswati - Tri Wiyono</p>
+            <p>2. Lulu Saraswati - Gatot</p>
+            <p>3. Rico Aditya Pinayungan - Puspita Sari Alfianti</p>
+            <p>4. Ricky Muhammad Firdaus</p>
+            <p>5. Dianita Novia Mumtaaz</p>
+            <p>6. Muhamad Abie Shafa Zuhdan</p>
+            <p>7. Muhamad Bagas Rizky Putra</p>
+            <p>8. Zacky Arya Saputra</p>
+            <p>9. Ardanu Farid Faturrahman</p>
+        </section>
+
+        <section id="Cicit" class="hidden">
+            <h2>Cicit</h2>
+            <p>1. Moch. Valentino Bagaskara</p>
+            <p>2. Aji Mahesa Putra</p>
+            <p>3. Zaki</p>
+            <p>4. Mira</p>
+            <p>5. Niar</p>
+            <p>6. Kinandari Aditya Asyifa</p>
+           
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('main section');
+
+            function showSection(id) {
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                const targetSection = document.getElementById(id);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+            }
+
+            // Tampilkan beranda saat halaman dimuat
+            showSection('beranda');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1); // Hapus tanda '#'
+                    showSection(targetId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
