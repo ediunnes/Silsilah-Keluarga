@@ -37,8 +37,7 @@ nav ul {
     padding: 0;
     margin: 0;
     text-align: center;
-    display: flex; /* Mengatur item navigasi secara horizontal */
-    gap: 0px; /* Memberikan jarak antar item navigasi (lebih ringkas dari margin) */
+    gap: 10px; /* Memberikan jarak antar item navigasi (lebih ringkas dari margin) */
 }
 
 nav ul li {
