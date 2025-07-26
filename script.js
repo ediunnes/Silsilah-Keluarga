@@ -4,8 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tombolSapa) {
         tombolSapa.addEventListener('click', function() {
             alert('Marilah kita bacakan Al Fatihah untuk Bapak, Ibu, dan Mbak Erni');
-            <a href="https://youtube.com/@ediunnes2267" 
-            class="a-content">
         });
     }
 });
