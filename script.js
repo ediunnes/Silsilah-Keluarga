@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (tombolSapa) {
         tombolSapa.addEventListener('click', function() {
-            alert('Marilah kita bacakan Al Fatihah untuk Bapak, Ibu, dan Mbak Erni');
+            alert('Marilah kita bacakan surat Al Fatihah untuk Almarhum dan Almarhumah');
         });
     }
 });
